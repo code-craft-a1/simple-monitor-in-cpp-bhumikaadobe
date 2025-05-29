@@ -12,5 +12,5 @@ enum class VitalStatus {
     OK,
     TempOutOfRange,
     PulseOutOfRange,
-    SpO2OutOfRange
+    Spo2OutOfRange
 };
