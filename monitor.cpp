@@ -31,7 +31,6 @@ void showMessage(VitalStatus status) {
         default:
             return;
     }
-    blinkAlert();
 }
 
 void Alert(VitalStatus status) {
