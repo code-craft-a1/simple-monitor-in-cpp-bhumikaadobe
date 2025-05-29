@@ -17,7 +17,7 @@ bool isSpo2Ok(float spo2) {
   return spo2 >= 90;
 }
 
-void Alert(){
+void Alert() {
     for (int i = 0; i < 6; i++) {
         cout << "\r* " << flush;
         sleep_for(seconds(1));
