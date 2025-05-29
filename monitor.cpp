@@ -1,8 +1,8 @@
 #include "./monitor.h"
-#include <assert.h>
+#include <iostream>
 #include <thread>
 #include <chrono>
-#include <iostream>
+
 using std::cout, std::flush, std::this_thread::sleep_for, std::chrono::seconds;
 
 bool isTemperatureOk(float temperature) {
