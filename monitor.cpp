@@ -44,7 +44,7 @@ void Alert(VitalStatus status) {
 }
 
 int isVitalsOk(float temperature, float pulseRate, float spo2) {
-  if(isTemperatureOk(temperature) && isPulseRateOk(pulseRate) && isSpo2Ok(spo2))
+  if (isTemperatureOk(temperature) && isPulseRateOk(pulseRate) && isSpo2Ok(spo2))
     return 1;
   if (!isTemperatureOk(temperature))
     Alert(VitalStatus::TempOutOfRange);
