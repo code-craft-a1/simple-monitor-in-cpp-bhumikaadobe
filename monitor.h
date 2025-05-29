@@ -1,5 +1,10 @@
 #pragma once
-
+enum class VitalStatus {
+    OK,
+    TempOutOfRange,
+    PulseOutOfRange,
+    Spo2OutOfRange
+};
 bool isTemperatureOk(float temperature);  // check temperatue normal range
 
 bool isPulseRateOk(float pulseRate);  // check pulse normal range
@@ -10,9 +15,4 @@ int isVitalsOk(float temperature, float pulseRate, float spo2);  // check vitals
 
 void Alert(VitalStatus status);
 
-enum class VitalStatus {
-    OK,
-    TempOutOfRange,
-    PulseOutOfRange,
-    Spo2OutOfRange
-};
+
