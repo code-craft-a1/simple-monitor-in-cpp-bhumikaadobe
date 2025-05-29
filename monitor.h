@@ -6,4 +6,11 @@ bool isPulseRateOk(float pulseRate);  // check pulse normal range
 
 bool isSpo2Ok(float spo2);  // check spo2 normal range
 
-int vitalsOk(float temperature, float pulseRate, float spo2);  // check vitals normal range
+int isVitalsOk(float temperature, float pulseRate, float spo2);  // check vitals normal range
+
+enum class VitalStatus {
+    OK,
+    TempOutOfRange,
+    PulseOutOfRange,
+    SpO2OutOfRange
+};
