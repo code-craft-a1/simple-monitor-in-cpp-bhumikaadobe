@@ -21,9 +21,9 @@ TEST(Monitor, ValidatePulse) {
 }
 
 TEST(Monitor, ValidateSpo2) {
-    EXPECT_TRUE(isSpO2Ok(92.0));
-    EXPECT_FALSE(isSpO2Ok(89.9));
-    EXPECT_TRUE(isSpO2Ok(90.0));
+    EXPECT_TRUE(isSpo2Ok(92.0));
+    EXPECT_FALSE(isSpo2Ok(89.9));
+    EXPECT_TRUE(isSpo2Ok(90.0));
 }
 
 TEST(Monitor, Vitals) {
