@@ -2,8 +2,8 @@
 #include "./monitor.h"
 
 TEST(Monitor, NotOkWhenAnyVitalIsOffRange) {
-  ASSERT_FALSE(vitalsOk(99, 102, 70));
-  ASSERT_TRUE(vitalsOk(98.1, 70, 98));
+  ASSERT_FALSE(isVitalsOk(99, 102, 70));
+  ASSERT_TRUE(isVitalsOk(98.1, 70, 98));
 }
 
 TEST(Monitor, ValidateTemperature) {
