@@ -26,7 +26,7 @@ void Alert() {
     }
 }
 
-int vitalsOk(float temperature, float pulseRate, float spo2) {
+int isVitalsOk(float temperature, float pulseRate, float spo2) {
   if (!isTemperatureOk(temperature)) {
     cout << "Temperature is critical!\n";
     Alert();
