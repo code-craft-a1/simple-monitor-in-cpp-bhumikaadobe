@@ -28,3 +28,13 @@ TEST(Monitor, ValidateSpo2)
     EXPECT_FALSE(isSpO2Ok(89.9));
     EXPECT_TRUE(isSpO2Ok(90.0));
 }
+
+TEST(Monitor, Vitals) 
+{
+  ASSERT_TRUE(vitalsOk(95, 60, 90)); 
+  ASSERT_TRUE(vitalsOk(102, 100, 90)); 
+  ASSERT_FALSE(vitalsOk(92.0, 65, 99)); 
+  ASSERT_FALSE(vitalsOk(102.1, 65, 96));
+  ASSERT_FALSE(vitalsOk(96, 59, 100)); 
+  ASSERT_FALSE(vitalsOk(97, 101, 99)); 
+}
