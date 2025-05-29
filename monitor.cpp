@@ -17,7 +17,25 @@ bool isSpo2Ok(float spo2) {
   return spo2 >= 90;
 }
 
-void Alert() {
+void showMessage(VitalStatus status) {
+    switch (status) {
+        case VitalStatus::TempOutOfRange:
+            cout << "Temperature is critical!\n";
+            break;
+        case VitalStatus::PulseOutOfRange:
+            cout << "Pulse Rate is out of range!\n";
+            break;
+        case VitalStatus::Spo2OutOfRange:
+            cout << "Oxygen Saturation out of range!\n";
+            break;
+        default:
+            return;
+    }
+    blinkAlert();
+}
+
+void Alert(VitalStatus status) {
+  
     for (int i = 0; i < 6; i++) {
         cout << "\r* " << flush;
         sleep_for(seconds(1));
@@ -25,6 +43,7 @@ void Alert() {
         sleep_for(seconds(1));
     }
 }
+
 
 int isVitalsOk(float temperature, float pulseRate, float spo2) {
   if (!isTemperatureOk(temperature)) {
